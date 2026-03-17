@@ -10,10 +10,17 @@ terraform {
 provider "docker" {}
 
 # ---------------------------
-# Create Docker Network
+# Network
 # ---------------------------
 resource "docker_network" "app_network" {
   name = "my_app_network"
+}
+
+# ---------------------------
+# Volume (Persistent DB)
+# ---------------------------
+resource "docker_volume" "postgres_data" {
+  name = "postgres_data"
 }
 
 # ---------------------------
@@ -33,6 +40,11 @@ resource "docker_container" "db" {
     name = docker_network.app_network.name
   }
 
+  volumes {
+    volume_name    = docker_volume.postgres_data.name
+    container_path = "/var/lib/postgresql/data"
+  }
+
   ports {
     internal = 5432
     external = 5432
@@ -40,18 +52,26 @@ resource "docker_container" "db" {
 }
 
 # ---------------------------
-# App Container (Nginx for now)
+# Flask App Container
 # ---------------------------
+resource "docker_image" "flask_image" {
+  name = "flask_app_image"
+
+  build {
+    context = "./app"
+  }
+}
+
 resource "docker_container" "app" {
-  name  = "web_app"
-  image = "nginx:latest"
+  name  = "flask_app"
+  image = docker_image.flask_image.name
 
   networks_advanced {
     name = docker_network.app_network.name
   }
 
   ports {
-    internal = 80
+    internal = 5000
     external = 8080
   }
 
