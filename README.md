@@ -1,47 +1,43 @@
-# 🚀 Production-Ready Terraform Docker Infrastructure
+# 🚀 Terraform Docker Project
 
 ## 📌 Overview
-This project demonstrates Infrastructure as Code (IaC) using Terraform to automate the deployment of a multi-container application.
-
-It provisions a complete environment with:
-- Flask application (Python backend)
+This project uses Terraform to automate Docker containers:
+- Flask app
 - PostgreSQL database
-- Docker network for communication
-- Persistent storage using volumes
+- Docker network
+- Persistent volume
 
 ---
 
 ## 🏗 Architecture
-
-User → Flask App (Docker) → PostgreSQL (Docker Volume)
-
-- Terraform provisions infrastructure
-- Docker network connects services
-- Volume ensures data persistence
-- App communicates with DB internally
+User → Flask App → PostgreSQL
 
 ---
 
 ## 🛠 Tech Stack
-
-- Terraform (Infrastructure as Code)
-- Docker (Containerization)
-- Flask (Python Web Framework)
-- PostgreSQL (Database)
-
----
-
-## ⚙️ Features
-
-- Infrastructure automation using Terraform
-- Multi-container deployment
-- Flask app connected to PostgreSQL
-- Persistent storage using Docker volumes
-- Custom Docker image build
-- Dependency management using Terraform
-- Full lifecycle management (apply/destroy)
+- Terraform
+- Docker
+- Flask
+- PostgreSQL
 
 ---
 
-## 📁 Project Structure
+## 🚀 Run Project
 
+terraform init  
+terraform apply  
+
+---
+
+## 🌐 Output
+http://localhost:8080  
+
+---
+
+## 💣 Destroy
+terraform destroy  
+
+---
+
+## ✅ Output
+Connected to PostgreSQL
