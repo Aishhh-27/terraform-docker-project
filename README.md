@@ -1,6 +1,6 @@
-# 🚀 Terraform Docker Infrastructure Automation
+#  Terraform Docker Infrastructure Automation
 
-## 📌 Project Overview
+##  Project Overview
 This project demonstrates Infrastructure as Code (IaC) using Terraform to automate Docker container provisioning.
 
 It creates:
@@ -11,7 +11,7 @@ It creates:
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 - Terraform
 - Docker
 - PostgreSQL
@@ -19,7 +19,7 @@ It creates:
 
 ---
 
-## 🧠 Key Features
+##  Key Features
 - Infrastructure provisioning using Terraform
 - Automated container deployment
 - Custom Docker network
@@ -28,7 +28,7 @@ It creates:
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 terraform-docker-project/
 │── main.tf
@@ -40,7 +40,7 @@ terraform-docker-project/
 
 ---
 
-## ⚙️ Setup Instructions
+##  Setup Instructions
 
 ### 1. Install Dependencies
 - Docker
@@ -90,7 +90,7 @@ terraform destroy
 
 ---
 
-## 🎯 Learning Outcomes
+##  Learning Outcomes
 - Hands-on experience with Infrastructure as Code
 - Docker container orchestration using Terraform
 - Managing dependencies between services
@@ -98,7 +98,7 @@ terraform destroy
 
 ---
 
-## 🚀 Future Improvements
+##  Future Improvements
 - Replace Nginx with Flask application
 - Connect application to PostgreSQL
 - Add persistent storage using volumes
