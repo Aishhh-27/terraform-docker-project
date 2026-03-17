@@ -1,110 +1,47 @@
-#  Terraform Docker Infrastructure Automation
+# 🚀 Production-Ready Terraform Docker Infrastructure
 
-##  Project Overview
-This project demonstrates Infrastructure as Code (IaC) using Terraform to automate Docker container provisioning.
+## 📌 Overview
+This project demonstrates Infrastructure as Code (IaC) using Terraform to automate the deployment of a multi-container application.
 
-It creates:
-- Docker network
-- PostgreSQL database container
-- Application container (Nginx)
-- Container communication setup
-
----
-
-## Tech Stack
-- Terraform
-- Docker
-- PostgreSQL
-- Nginx
+It provisions a complete environment with:
+- Flask application (Python backend)
+- PostgreSQL database
+- Docker network for communication
+- Persistent storage using volumes
 
 ---
 
-##  Key Features
-- Infrastructure provisioning using Terraform
-- Automated container deployment
-- Custom Docker network
-- Dependency management between services
-- One-command cleanup using `terraform destroy`
+## 🏗 Architecture
+
+User → Flask App (Docker) → PostgreSQL (Docker Volume)
+
+- Terraform provisions infrastructure
+- Docker network connects services
+- Volume ensures data persistence
+- App communicates with DB internally
 
 ---
 
-##  Project Structure
+## 🛠 Tech Stack
 
-terraform-docker-project/
-│── main.tf
-│── variables.tf
-│── outputs.tf
-│── README.md
-│── .gitignore
-
+- Terraform (Infrastructure as Code)
+- Docker (Containerization)
+- Flask (Python Web Framework)
+- PostgreSQL (Database)
 
 ---
 
-##  Setup Instructions
+## ⚙️ Features
 
-### 1. Install Dependencies
-- Docker
-- Terraform
-
----
-
-### 2. Initialize Terraform
-
-terraform init
-
+- Infrastructure automation using Terraform
+- Multi-container deployment
+- Flask app connected to PostgreSQL
+- Persistent storage using Docker volumes
+- Custom Docker image build
+- Dependency management using Terraform
+- Full lifecycle management (apply/destroy)
 
 ---
 
-### 3. Preview Infrastructure
+## 📁 Project Structure
 
-terraform plan
-
-
----
-
-### 4. Deploy Infrastructure
-
-terraform apply
-
-
----
-
-### 5. Access Application
-Open in browser:
-
-http://localhost:8080
-
-
----
-
-### 6. Destroy Infrastructure
-
-terraform destroy
-
-
----
-
-## 📸 Output
-- Nginx web server running on port 8080
-- PostgreSQL database container running
-
----
-
-##  Learning Outcomes
-- Hands-on experience with Infrastructure as Code
-- Docker container orchestration using Terraform
-- Managing dependencies between services
-- Infrastructure lifecycle management
-
----
-
-##  Future Improvements
-- Replace Nginx with Flask application
-- Connect application to PostgreSQL
-- Add persistent storage using volumes
-- Deploy on cloud (AWS/GCP)
-
----
-
-## 👩‍💻 Author
-Aishwarya Ganesh
